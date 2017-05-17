@@ -49,11 +49,11 @@ public class Assign3
          }
       }
       
-      System.out.print( "\nHere are our hands, from unshuffled deck: \n" );
+      System.out.print( "\nHere are our hands, from UNSHUFFLED deck: \n" );
       // Print each hand then reset it
       for ( int j = 0; j < players; j++ )
       {
-         System.out.println( "Hand of player " + ( j + 1 ) + " " + handsArray[j].toString() );
+         System.out.println( "Player " + ( j + 1 ) + " " + handsArray[j].toString() );
          handsArray[j].resetHand();
       }
       
@@ -80,7 +80,7 @@ public class Assign3
       // Print each hand
       for ( int l = 0; l < players; l++ )
       {
-         System.out.println("Hand of player " + ( l + 1 ) + " " + handsArray[l].toString());
+         System.out.println("Player " + ( l + 1 ) + " " + handsArray[l].toString());
       }
       key.close();
    }
@@ -359,23 +359,24 @@ class Deck {
 /************************************OUTPUT****************************************************************************
 Please enter a number of players between 1 and 10:  8
 
-Here are our hands, from unshuffled deck: 
-Hand of player 1 Hand = ( [K, SPADES], [5, SPADES], [T, HEARTS], [2, HEARTS], [7, DIAMONDS], [Q, CLUBS], [4, CLUBS] )
-Hand of player 2 Hand = ( [Q, SPADES], [4, SPADES], [9, HEARTS], [A, HEARTS], [6, DIAMONDS], [J, CLUBS], [3, CLUBS] )
-Hand of player 3 Hand = ( [J, SPADES], [3, SPADES], [8, HEARTS], [K, DIAMONDS], [5, DIAMONDS], [T, CLUBS], [2, CLUBS] )
-Hand of player 4 Hand = ( [T, SPADES], [2, SPADES], [7, HEARTS], [Q, DIAMONDS], [4, DIAMONDS], [9, CLUBS], [A, CLUBS] )
-Hand of player 5 Hand = ( [9, SPADES], [A, SPADES], [6, HEARTS], [J, DIAMONDS], [3, DIAMONDS], [8, CLUBS] )
-Hand of player 6 Hand = ( [8, SPADES], [K, HEARTS], [5, HEARTS], [T, DIAMONDS], [2, DIAMONDS], [7, CLUBS] )
-Hand of player 7 Hand = ( [7, SPADES], [Q, HEARTS], [4, HEARTS], [9, DIAMONDS], [A, DIAMONDS], [6, CLUBS] )
-Hand of player 8 Hand = ( [6, SPADES], [J, HEARTS], [3, HEARTS], [8, DIAMONDS], [K, CLUBS], [5, CLUBS] )
+Here are our hands, from UNSHUFFLED deck: 
+Player 1 Hand = ( [K, SPADES], [5, SPADES], [T, HEARTS], [2, HEARTS], [7, DIAMONDS], [Q, CLUBS], [4, CLUBS] )
+Player 2 Hand = ( [Q, SPADES], [4, SPADES], [9, HEARTS], [A, HEARTS], [6, DIAMONDS], [J, CLUBS], [3, CLUBS] )
+Player 3 Hand = ( [J, SPADES], [3, SPADES], [8, HEARTS], [K, DIAMONDS], [5, DIAMONDS], [T, CLUBS], [2, CLUBS] )
+Player 4 Hand = ( [T, SPADES], [2, SPADES], [7, HEARTS], [Q, DIAMONDS], [4, DIAMONDS], [9, CLUBS], [A, CLUBS] )
+Player 5 Hand = ( [9, SPADES], [A, SPADES], [6, HEARTS], [J, DIAMONDS], [3, DIAMONDS], [8, CLUBS] )
+Player 6 Hand = ( [8, SPADES], [K, HEARTS], [5, HEARTS], [T, DIAMONDS], [2, DIAMONDS], [7, CLUBS] )
+Player 7 Hand = ( [7, SPADES], [Q, HEARTS], [4, HEARTS], [9, DIAMONDS], [A, DIAMONDS], [6, CLUBS] )
+Player 8 Hand = ( [6, SPADES], [J, HEARTS], [3, HEARTS], [8, DIAMONDS], [K, CLUBS], [5, CLUBS] )
 
 Here are our hands, from SHUFFLED deck:
-Hand of player 1 Hand = ( [J, DIAMONDS], [Q, HEARTS], [K, HEARTS], [9, SPADES], [2, DIAMONDS], [8, SPADES], [K, DIAMONDS] )
-Hand of player 2 Hand = ( [9, CLUBS], [7, CLUBS], [T, SPADES], [T, CLUBS], [3, CLUBS], [8, CLUBS], [4, DIAMONDS] )
-Hand of player 3 Hand = ( [Q, SPADES], [5, SPADES], [T, HEARTS], [5, CLUBS], [A, HEARTS], [J, CLUBS], [6, DIAMONDS] )
-Hand of player 4 Hand = ( [4, SPADES], [A, SPADES], [5, DIAMONDS], [Q, CLUBS], [6, CLUBS], [A, DIAMONDS], [A, CLUBS] )
-Hand of player 5 Hand = ( [4, HEARTS], [4, CLUBS], [K, CLUBS], [5, HEARTS], [T, DIAMONDS], [J, HEARTS] )
-Hand of player 6 Hand = ( [6, HEARTS], [3, SPADES], [7, DIAMONDS], [J, SPADES], [7, HEARTS], [9, DIAMONDS] )
-Hand of player 7 Hand = ( [2, HEARTS], [3, DIAMONDS], [Q, DIAMONDS], [6, SPADES], [3, HEARTS], [2, CLUBS] )
-Hand of player 8 Hand = ( [2, SPADES], [7, SPADES], [8, DIAMONDS], [K, SPADES], [9, HEARTS], [8, HEARTS] )
+Player 1 Hand = ( [3, DIAMONDS], [8, SPADES], [4, DIAMONDS], [T, CLUBS], [6, SPADES], [J, DIAMONDS], [7, SPADES] )
+Player 2 Hand = ( [7, HEARTS], [5, DIAMONDS], [8, DIAMONDS], [K, HEARTS], [J, HEARTS], [4, HEARTS], [9, DIAMONDS] )
+Player 3 Hand = ( [5, SPADES], [T, HEARTS], [J, SPADES], [9, CLUBS], [Q, SPADES], [4, SPADES], [Q, CLUBS] )
+Player 4 Hand = ( [6, CLUBS], [8, CLUBS], [8, HEARTS], [A, HEARTS], [2, SPADES], [J, CLUBS], [A, CLUBS] )
+Player 5 Hand = ( [5, HEARTS], [2, CLUBS], [K, CLUBS], [3, HEARTS], [Q, DIAMONDS], [3, CLUBS] )
+Player 6 Hand = ( [K, SPADES], [T, SPADES], [9, HEARTS], [2, HEARTS], [7, CLUBS], [3, SPADES] )
+Player 7 Hand = ( [2, DIAMONDS], [6, HEARTS], [A, SPADES], [9, SPADES], [K, DIAMONDS], [A, DIAMONDS] )
+Player 8 Hand = ( [4, CLUBS], [Q, HEARTS], [5, CLUBS], [7, DIAMONDS], [T, DIAMONDS], [6, DIAMONDS] )
+
  */
