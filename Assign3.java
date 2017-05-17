@@ -116,6 +116,15 @@ class Card
    {
       suit = newSuit;
    }
+   
+   public boolean set( char value, Suit suit )
+   {
+      setValue( value );
+      setSuit( suit );
+      errorFlag = isValid( value, suit );
+
+      return true;
+   }
 
    // Accessors
    public char getValue()
@@ -134,6 +143,7 @@ class Card
    }
 
    // Public Methods
+   // Returns the value and suit of a card object as a single string
    public String toString()
    {
       if ( errorFlag == true )
@@ -146,15 +156,7 @@ class Card
       }
    }
 
-   public boolean set( char value, Suit suit )
-   {
-      setValue( value );
-      setSuit( suit );
-      errorFlag = isValid( value, suit );
-
-      return true;
-   }
-
+   // Returns whether a card is equivalent to the source card
    public boolean equals( Card card )
    {
       if ( getValue() == card.getValue() && getFlag() == card.getFlag() && getSuit() == card.getSuit() )
@@ -166,6 +168,7 @@ class Card
    }
 
    // Private Methods
+   // Returns whether a card has a valid value
    private boolean isValid( char value, Suit suit )
    {
       if (value == 'A' || value == '2' || value == '3' || value == '4' || value == '5' || value == '6' || value == '7'
@@ -370,13 +373,13 @@ Player 7 Hand = ( [7, SPADES], [Q, HEARTS], [4, HEARTS], [9, DIAMONDS], [A, DIAM
 Player 8 Hand = ( [6, SPADES], [J, HEARTS], [3, HEARTS], [8, DIAMONDS], [K, CLUBS], [5, CLUBS] )
 
 Here are our hands, from SHUFFLED deck:
-Player 1 Hand = ( [3, DIAMONDS], [8, SPADES], [4, DIAMONDS], [T, CLUBS], [6, SPADES], [J, DIAMONDS], [7, SPADES] )
-Player 2 Hand = ( [7, HEARTS], [5, DIAMONDS], [8, DIAMONDS], [K, HEARTS], [J, HEARTS], [4, HEARTS], [9, DIAMONDS] )
-Player 3 Hand = ( [5, SPADES], [T, HEARTS], [J, SPADES], [9, CLUBS], [Q, SPADES], [4, SPADES], [Q, CLUBS] )
-Player 4 Hand = ( [6, CLUBS], [8, CLUBS], [8, HEARTS], [A, HEARTS], [2, SPADES], [J, CLUBS], [A, CLUBS] )
-Player 5 Hand = ( [5, HEARTS], [2, CLUBS], [K, CLUBS], [3, HEARTS], [Q, DIAMONDS], [3, CLUBS] )
-Player 6 Hand = ( [K, SPADES], [T, SPADES], [9, HEARTS], [2, HEARTS], [7, CLUBS], [3, SPADES] )
-Player 7 Hand = ( [2, DIAMONDS], [6, HEARTS], [A, SPADES], [9, SPADES], [K, DIAMONDS], [A, DIAMONDS] )
-Player 8 Hand = ( [4, CLUBS], [Q, HEARTS], [5, CLUBS], [7, DIAMONDS], [T, DIAMONDS], [6, DIAMONDS] )
+Player 1 Hand = ( [8, CLUBS], [7, DIAMONDS], [8, SPADES], [5, DIAMONDS], [Q, DIAMONDS], [6, DIAMONDS], [J, CLUBS] )
+Player 2 Hand = ( [A, HEARTS], [9, DIAMONDS], [2, CLUBS], [4, CLUBS], [7, HEARTS], [T, HEARTS], [J, SPADES] )
+Player 3 Hand = ( [T, SPADES], [6, HEARTS], [9, HEARTS], [7, SPADES], [Q, CLUBS], [T, CLUBS], [Q, SPADES] )
+Player 4 Hand = ( [2, DIAMONDS], [6, SPADES], [A, DIAMONDS], [8, HEARTS], [3, CLUBS], [6, CLUBS], [A, CLUBS] )
+Player 5 Hand = ( [K, HEARTS], [3, DIAMONDS], [4, HEARTS], [7, CLUBS], [4, DIAMONDS], [J, HEARTS] )
+Player 6 Hand = ( [3, SPADES], [8, DIAMONDS], [5, SPADES], [Q, HEARTS], [5, CLUBS], [9, SPADES] )
+Player 7 Hand = ( [5, HEARTS], [2, SPADES], [4, SPADES], [9, CLUBS], [2, HEARTS], [K, DIAMONDS] )
+Player 8 Hand = ( [K, CLUBS], [3, HEARTS], [K, SPADES], [T, DIAMONDS], [A, SPADES], [J, DIAMONDS] )
 
  */
